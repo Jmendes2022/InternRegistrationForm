@@ -1,0 +1,88 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[ArchivedInterns]
+       [dbo].[DroppedInterns]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[ArchivedInterns].[EntranceSurvery] is being dropped, data loss could occur.
+       The column [dbo].[ArchivedInterns].[ExitSurverySent] is being dropped, data loss could occur.
+       The column [dbo].[DroppedInterns].[EntranceSurvery] is being dropped, data loss could occur.
+       The column [dbo].[DroppedInterns].[ExitSurverySent] is being dropped, data loss could occur.
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+     Table rebuild
+       [dbo].[ArchivedInterns] (Table)
+       [dbo].[DroppedInterns] (Table)
+     Create
+       [dbo].[Interns] (Table)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+     Alter
+       [dbo].[spAdmin_GetAllArchivedInterns] (Procedure)
+       [dbo].[spIntern_ArchiveIntern] (Procedure)
+       [dbo].[spIntern_DropIntern] (Procedure)
+       [dbo].[spIntern_AddIntern] (Procedure)
+       [dbo].[spIntern_EditIntern] (Procedure)
+       [dbo].[spIntern_GetAllInterns] (Procedure)
+       [dbo].[spIntern_GetInternById] (Procedure)
+
+** Supporting actions
+
+The column [dbo].[ArchivedInterns].[EntranceSurvery] is being dropped, data loss could occur.
+The column [dbo].[ArchivedInterns].[ExitSurverySent] is being dropped, data loss could occur.
+The column [dbo].[DroppedInterns].[EntranceSurvery] is being dropped, data loss could occur.
+The column [dbo].[DroppedInterns].[ExitSurverySent] is being dropped, data loss could occur.
+

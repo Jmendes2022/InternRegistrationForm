@@ -1,0 +1,89 @@
+﻿
+@{
+    var nextYear = DateTime.Today.Year + 1;
+    var previousYear = DateTime.Today.Year - 1;
+
+    List<string> dates = new List<string>();
+    dates.Add(previousYear.ToString().Remove(0, 2));
+    dates.Add(DateTime.Today.Year.ToString().Remove(0, 2));
+    dates.Add(nextYear.ToString().Remove(0, 2));
+
+    List<string> tracks = new List<string>() { "A", "B", "C", "D/E" };
+    List<string> Terms = new List<string>() { "01", "02", "03", "04", "05" };
+}
+@model List<TermDatesModel>
+
+    <div class="text-center">
+    <h1 class="display-4 mb-5">Current Terms</h1>
+    <div class="my-5">
+        <form asp-action="EditTermDates" method="post">
+
+            <table class="table table-sm table-bordered table-striped" id="tblTermsList">
+                <thead>
+                    <tr>
+                        <th scope="col">Track</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">End Date</th>
+                        <th scope="col">New Track Name</th>
+                        <th scope="col">New Start Date</th>
+                        <th scope="col">New End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (var i = 0; i < Model.Count(); i++)
+                    {
+                                <tr>
+                                    <td style="margin-top: auto; margin-bottom: auto;">@Model[i].Track</td>
+                                    <td>@Model[i].StartDate.ToString("MM-dd-yy")</td>
+                                    <td>@Model[i].EndDate.ToString("MM-dd-yy")</td>
+                                    <td>
+                                        <select class="form-select" type="text" required size="3" asp-for="@Model[i].Track" placeholder="@Model[i].Track">
+                                    @for (var h = 0; h < dates.Count(); h++)
+                                    {
+                                        var year = dates[i];
+
+                                        @for (var x = 0; x < Terms.Count(); x++)
+                                        {
+                                            var currentTerm = Terms[x];
+
+                                            @for (var z = 0; z < tracks.Count(); z++)
+                                            {
+                                                var currentTrack = tracks[z];
+
+                                                                        <option value="@year@currentTerm@currentTrack">@year@currentTerm@currentTrack</option>
+                                            }
+                                        }
+                                    }
+                                        </select>    
+                                    </td>
+                                    <td>
+                                        <input type="date" required class="form-control mb-4" asp-for="@Model[i].StartDate" placeholder="@Model[i].StartDate.ToString("MM-dd-yy")">
+                                    </td>
+                                    <td>
+                                        <input type="date" required class="form-control mb-4" asp-for="@Model[i].EndDate" placeholder="@Model[i].EndDate.ToString("MM-dd-yy")">
+                                    </td>
+                                </tr>
+                    }
+                </tbody>
+            </table>
+            <div style="text-align: center">
+                <a class="btn btn-primary" style="width: 20%" asp-action="UpdateAllTermDates" role="button">Save Changes</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-auto">
+        <div style="text-align: center">
+            <a class="btn btn-primary" style="width: 20%" asp-action="AdminIndex" role="button">Return Home</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script>
+        $(()=>{
+            $('#tblTermsList').DataTable();
+        })
+    </script>
+}

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>InternshipDb</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{3b9f76e6-a8cf-41ae-8d4e-e41dd7ad83d4}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>InternshipDb</RootNamespace>
+    <AssemblyName>InternshipDb</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="PublishProfile" />
+    <Folder Include="StoredProcedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Interns.sql" />
+    <Build Include="StoredProcedures\spIntern_AddIntern.sql" />
+    <Build Include="StoredProcedures\spIntern_EditIntern.sql" />
+    <Build Include="StoredProcedures\spIntern_DropIntern.sql" />
+    <Build Include="StoredProcedures\spIntern_ArchiveIntern.sql" />
+    <Build Include="ArchivedInterns.sql" />
+    <Build Include="StoredProcedures\spIntern_GetAllInterns.sql" />
+    <Build Include="Admins.sql" />
+    <Build Include="StoredProcedures\spAdmin_AddAdmin.sql" />
+    <Build Include="StoredProcedures\spAdmin_GetAdmin.sql" />
+    <Build Include="StoredProcedures\spAdmin_EditAdmin.sql" />
+    <Build Include="StoredProcedures\spIntern_GetInternById.sql" />
+    <Build Include="StoredProcedures\spAdmin_GetAdminById.sql" />
+    <Build Include="StoredProcedures\spAdmin_GetAllAdmins.sql" />
+    <Build Include="StoredProcedures\spAdmin_GetAllArchivedInterns.sql" />
+    <Build Include="StoredProcedures\spAdmin_GetAdminByUsername.sql" />
+    <Build Include="DroppedInterns.sql" />
+    <Build Include="StoredProcedures\spAdmin_DropAdmin.sql" />
+    <Build Include="DroppedAdmins_1.sql" />
+    <Build Include="StoredProcedures\spReport_MissingESET.sql" />
+    <Build Include="StoredProcedures\spReport_MissingResume.sql" />
+    <Build Include="StoredProcedures\spReport_MissingSurvey.sql" />
+    <Build Include="StoredProcedures\spReport_MissingOrientation.sql" />
+    <Build Include="StoredProcedures\spReport_MissingThreeDocuments.sql" />
+    <Build Include="StoredProcedures\spReport_MissingMasterclass.sql" />
+    <Build Include="TermDates.sql" />
+    <Build Include="StoredProcedures\spTermDates_EditDateForTrack.sql" />
+    <Build Include="StoredProcedures\spTermDates_GetAll.sql" />
+    <Build Include="StoredProcedures\spTermDates_GetById.sql" />
+    <Build Include="StoredProcedures\spTermDates_AddTerm.sql" />
+    <Build Include="StoredProcedures\spTermDates_DeleteTerm.sql" />
+    <Build Include="PendingAdmins.sql" />
+    <Build Include="StoredProcedures\spAdmin_AddPendingAdmin.sql" />
+    <Build Include="StoredProcedures\spAdmin_AcceptPendingAdminById.sql" />
+    <Build Include="StoredProcedures\spAdmin_GetAllPendingAdmins.sql" />
+    <Build Include="StoredProcedures\spAdmin_DeletePendingAdmin.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishProfile\InternshipDb.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="InternshipDb.refactorlog" />
+  </ItemGroup>
+</Project>

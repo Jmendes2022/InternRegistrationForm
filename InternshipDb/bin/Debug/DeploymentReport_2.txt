@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Interns] (Table)
+     Create
+       Default Constraint: unnamed constraint on [dbo].[Interns] (Default Constraint)
+
+** Supporting actions
+     Refresh
+       [dbo].[spIntern_AddIntern] (Procedure)
+       [dbo].[spIntern_ArchiveIntern] (Procedure)
+       [dbo].[spIntern_DeleteIntern] (Procedure)
+       [dbo].[spIntern_EditIntern] (Procedure)
+       [dbo].[spIntern_GetAllInterns] (Procedure)

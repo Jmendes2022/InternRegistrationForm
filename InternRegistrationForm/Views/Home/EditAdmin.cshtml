@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model AdminsModel
+
+<div>
+    <div class="text-centered">
+        <h1>Edit Information for Administrator: &nbsp; @Model.FirstName @Model.LastName</h1>
+    </div>
+    <form asp-action="EditAdmin" asp-route-id="@Model.Id" method="post">
+        <div class="row">
+            <div class="col-2">
+                <label class="mb-3 mt-5"><strong>First Name: </strong></label>
+                <input type="text" class="form-control" asp-for="@Model.FirstName" style="background: white" value="@Model.FirstName">
+            </div>
+            <div class="col-2">
+                <label class="mb-3 mt-5"><strong>Last Name: </strong></label>
+                <input type="text" class="form-control" asp-for="@Model.LastName" style="background: white" value="@Model.LastName">
+            </div>
+            <div class="col-2">
+                <label class="mb-3 mt-5"><strong>Username: </strong></label>
+                <input type="text" class="form-control" asp-for="@Model.Username" style="background: white" value="@Model.Username">
+            </div>
+            <div class="col-2">
+                <label class="mb-3 mt-5"><strong>Password: </strong></label>
+                <input type="password" class="form-control" asp-for="@Model.Password" style="background: white" value="@Model.Password">
+            </div>
+        </div>
+        <div class=row>
+            <div class="my-3 col-4">
+                <label asp-for="Department" class="form-label my-2"><strong>Department:</strong></label>
+                <select class="form-select" asp-for="Department" placeholder="Select an Option">
+                    <option value="placeholder" selected disabled>Select an Option</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                    <option value="IT Systems Network">IT Systems Network</option>
+                    <option value="IT Support">IT Support</option>
+                    <option value="Analytics/BD">Analytics/BD</option>
+                    <option value="ACT/GITA5G">ACT/GITA5G</option>
+                </select>
+            </div>
+        </div>
+        <div>
+                <input class="form-check-input" type="checkbox" value="true" asp-for="HasPermissions">
+                        <input class="form-check-input" type="hidden" value="false" asp-for="HasPermissions">
+                        <label class="form-check-label" asp-for="HasPermissions">
+                        Admin Permissions &nbsp;
+                        </label> 
+        </div>
+        <div class="row">
+            <div class="col mb-5 mt-5" style="text-align: center">
+                <button type="submit" class="btn btn-primary" asp-route-id="@Model.Id" style="width: 30%">Update Admin</button>
+            </div>
+        </div>
+    </form>
+    <div style="height: 1px; background: black;" class="mb-5">
+    </div>
+    <div style="text-align: center;">
+        <a class="btn btn-primary" style="width: 20%" asp-action="AdminIndex" role="button">Return Home</a>
+    </div>
+</div>

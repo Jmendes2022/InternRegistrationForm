@@ -1,0 +1,98 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[ArchivedInterns]
+       [dbo].[DroppedInterns]
+       [dbo].[Interns]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[ArchivedInterns].[StudentId] on table [dbo].[ArchivedInterns] must be added, but the column has no
+         default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this
+         issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+       The column [dbo].[DroppedInterns].[StudentId] on table [dbo].[DroppedInterns] must be added, but the column has no
+         default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this
+         issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+       The column [dbo].[Interns].[StudentId] on table [dbo].[Interns] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[ArchivedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedInterns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+       unnamed constraint on [dbo].[Interns] (Default Constraint)
+     Table rebuild
+       [dbo].[ArchivedInterns] (Table)
+       [dbo].[DroppedInterns] (Table)
+       [dbo].[Interns] (Table)
+     Alter
+       [dbo].[spAdmin_GetAllArchivedInterns] (Procedure)
+       [dbo].[spIntern_ArchiveIntern] (Procedure)
+       [dbo].[spIntern_DropIntern] (Procedure)
+       [dbo].[spIntern_AddIntern] (Procedure)
+       [dbo].[spIntern_EditIntern] (Procedure)
+       [dbo].[spIntern_GetAllInterns] (Procedure)
+       [dbo].[spIntern_GetInternById] (Procedure)
+
+** Supporting actions
+     Refresh
+       [dbo].[spAdmin_DropAdmin] (Procedure)
+
+The column [dbo].[ArchivedInterns].[StudentId] on table [dbo].[ArchivedInterns] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[DroppedInterns].[StudentId] on table [dbo].[DroppedInterns] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[Interns].[StudentId] on table [dbo].[Interns] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+If this deployment is executed, changes to [dbo].[Interns] might introduce run-time errors in [dbo].[spIntern_DeleteIntern].
+

@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<AdminsModel>
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-5">Current Admins</h1>
+    <div class="my-5">
+        <table class="table table-sm table-bordered table-striped" id="tblAdminList">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (var i = 0; i < Model.Count(); i++)
+                {
+                    <tr>
+                        <th scope="row"><a asp-action="EditAdmin" asp-route-id="@Model[i].Id">Edit</a>&nbsp;&nbsp;&nbsp;<a asp-action="DeleteAdmin" asp-route-id="@Model[i].Id">Delete</a></th>
+                        <td>@Model[i].FirstName</td>
+                        <td>@Model[i].LastName</td>
+                        <td>@Model[i].Username</td>
+                        <td>@Model[i].Department</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-auto">
+        <div style="text-align: center">
+            <a class="btn btn-primary" style="width: 20%" asp-action="AdminIndex" role="button">Return Home</a>
+            <a class="btn btn-primary" style="width: 20%" asp-action="AdminRegistration" role="button">Add Admin</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script>
+        $(()=>{
+            $('#tblAdminList').DataTable();
+        })
+    </script>
+}

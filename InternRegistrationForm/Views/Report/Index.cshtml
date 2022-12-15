@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="text-center">
+    <h1 class="display-4 mb-5">Choose a report below</h1>
+    <div class="my-5">
+       <div class="row my-5">
+           <div class="col-auto">
+                <a class="btn btn-primary" asp-action="MissingESET" role="button">Missing ESET</a>
+           </div>
+           <div class="col-auto">
+                <a class="btn btn-primary" asp-action="MissingResume" role="button">Missing Resume</a>
+           </div>
+           <div class="col-auto">
+                <a class="btn btn-primary" asp-action="MissingSurvey" role="button">Missing Survey</a>
+           </div>
+           <div class="col-auto">
+                <a class="btn btn-primary" asp-action="MissingOrientation" role="button">Missing Orientation 2</a>
+           </div>
+           <div class="col-auto">
+                <a class="btn btn-primary" asp-action="MissingThreeDocuments" role="button">Missing Three documents signed</a>
+           </div>
+           <div class="col-auto mb-5">
+                <a class="btn btn-primary" asp-action="MissingMasterclass" role="button">Missing Masterclass Presentation</a>
+           </div>
+       </div>
+       <div class="my-5" style="text-align: center">
+           <h5>These buttons above will generate a report that will return the interns who have missing graduation requirements</h5>
+       </div>
+       <div class="my-5" style="text-align: center">
+           <a class="btn btn-primary" asp-action="AdminIndex" asp-controller="Home" style="width: 20%" role="button">Go Home</a>
+       </div>
+    </div>
+</div>

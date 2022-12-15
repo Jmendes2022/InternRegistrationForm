@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model AdminsModel
+@if (Context.Session.GetInt32("AdminId") != null)
+{        <div>
+        <h3 class="my-5" style="text-align: center">Please fill out the form below</h3>
+        <div>
+            <form asp-action="AddAdmin" method="post">
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label mb-2">First Name</label>
+                    <input type="text" class="form-control mb-4" required asp-for="FirstName" placeholder="First Name Here...." aria-describedby="First Name">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label mb-2">Last Name</label>
+                    <input type="text" class="form-control mb-4" required asp-for="LastName" placeholder="Last Name Here...." aria-describedby="Last Name">
+                </div>
+            
+                <div>
+                    <label asp-for="Username" class="form-label mb-2">Username</label>
+                    <input type="text" class="form-control" required asp-for="Username" placeholder="Username here...." aria-describedby="Username">
+                </div>
+                <div class="mb-3">
+                    @if (ViewData["alreadyExists"] is true)
+                        {
+                            <label class="text-danger">Username already Exists</label>   
+                        }
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label mb-2">Password</label>
+                    <input type="password" class="form-control mb-4" required asp-for="Password" placeholder="Password Here...." aria-describedby="Password">
+                </div>
+                <div class="my-3">
+                    <label asp-for="Department" class="form-label my-2">Choose your Department</label>
+                    <select class="form-select" asp-for="Department" required placeholder="Select an Option">
+                        <option value="placeholder" selected disabled>Select an Option</option>
+                        <option value="Software Development">Software Development</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                        <option value="IT Systems Network">IT Systems Network</option>
+                        <option value="IT Support">IT Support</option>
+                        <option value="Analytics/BD">Analytics/BD</option>
+                        <option value="ACT/GITA5G">ACT/GITA5G</option>
+                    </select>
+                </div>
+                <div>
+                    <input class="form-check-input" type="checkbox" value="true" asp-for="HasPermissions">
+                            <input class="form-check-input" type="hidden" value="false" asp-for="HasPermissions">
+                            <label class="form-check-label" asp-for="HasPermissions">
+                            Admin Permissions &nbsp;
+                            </label> 
+                </div>
+                <div class="text-center my-5">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        @if (Context.Session != null)
+        {
+               <div style="text-align: center">
+                 <a class="btn btn-primary" style="width: 20%" asp-action="AdminIndex" role="button">Return Home</a>
+               </div>
+        }
+    </div>
+
+    
+}
+    <div>
+        <h3 class="my-5" style="text-align: center">Please fill out the form below</h3>
+        <div>
+            <form asp-action="AddPendingAdmins" method="post">
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label mb-2">First Name</label>
+                    <input type="text" class="form-control mb-4" required asp-for="FirstName" placeholder="First Name Here...." aria-describedby="First Name">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label mb-2">Last Name</label>
+                    <input type="text" class="form-control mb-4" required asp-for="LastName" placeholder="Last Name Here...." aria-describedby="Last Name">
+                </div>
+            
+                <div>
+                    <label asp-for="Username" class="form-label mb-2">Username</label>
+                    <input type="text" class="form-control" required asp-for="Username" placeholder="Username here...." aria-describedby="Username">
+                </div>
+                <div class="mb-3">
+                    @if (ViewData["alreadyExists"] is true)
+                        {
+                            <label class="text-danger">Username already Exists</label>   
+                        }
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label mb-2">Password</label>
+                    <input type="password" class="form-control mb-4" required asp-for="Password" placeholder="Password Here...." aria-describedby="Password">
+                </div>
+                <div class="my-3">
+                    <label asp-for="Department" class="form-label my-2">Choose your Department</label>
+                    <select class="form-select" required asp-for="Department" placeholder="Select an Option">
+                        <option value="placeholder" selected disabled>Select an Option</option>
+                        <option value="Software Development">Software Development</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                        <option value="IT Systems Network">IT Systems Network</option>
+                        <option value="IT Support">IT Support</option>
+                        <option value="Analytics/BD">Analytics/BD</option>
+                        <option value="ACT/GITA5G">ACT/GITA5G</option>
+                    </select>
+                </div>
+                <div>
+                    <input class="form-check-input" type="checkbox" value="true" asp-for="HasPermissions" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="HasPermissions" disabled>
+                            <label class="form-check-label" asp-for="HasPermissions" >
+                            Admin Permissions &nbsp;
+                            </label> 
+                </div>
+                <div class="text-center my-5">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>

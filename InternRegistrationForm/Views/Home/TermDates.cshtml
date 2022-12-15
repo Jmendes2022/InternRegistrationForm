@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@*There is 61 different start/end dates.*@
+@model List<TermDatesModel>
+
+<div>
+<table class="table" id="tblTermList">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>  
+      <th scope="col">Track</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <th scope="row"><a asp-action="EditSingleTermDate" asp-route-id="@item.Id">Edit</a>&nbsp;&nbsp;&nbsp;<a asp-action="DeleteTerm" asp-route-id="@item.Id">Delete</a></th>
+                    <td>@item.Track</td>
+                    <td>@item.StartDate.ToString("MM-dd-yy")</td>
+                    <td>@item.EndDate.ToString("MM-dd-yy")</td>
+                </tr>
+        }
+  </tbody>
+</table>
+    <div class="text-center my-5 row">
+        <div class="col align-text: center">
+            <a role="button" class="btn btn-primary col-2" asp-action="AddTerm">Add Term</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script>
+        $(()=>{
+            $('#tblTermList').DataTable();
+        })
+    </script>
+}

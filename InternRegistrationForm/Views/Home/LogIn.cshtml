@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model LogInViewModel
+<div class="my-5" style="text-align: center">
+    <h1>Log in Here!</h1>
+</div>
+
+<form method="post" asp-action="LogIn">
+    <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-0 col-form-label">Username: &nbsp;</label>
+        <div class="col-sm-4 mb-3 mt-1">
+            <input type="text" class="form-control" asp-for="adminsModel.Username" placeholder="Enter a username here....">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-0 col-form-label">Password: &nbsp;</label>
+        <div class="col-sm-4 mt-1">
+            <input type="password" class="form-control" asp-for="adminsModel.Password" placeholder="Enter a password here....">
+        </div>
+        <div class=my-2>
+            @if (Model.LoggedAttemptFailed == true)
+            {
+                <label class="text-danger">Invalid Username or Password</label>
+            }
+        </div>
+    </div>
+    <div class="my-3" >
+        <button type="submit" style="width: 15% " class="btn btn-primary">Log In</button>
+    </div>
+    @if (Model.AllAdmins.Count() > 0) 
+        {
+                <div style="text-align: center">
+                  <a class="btn btn-primary" style="width: 20%" asp-action="AdminRegistration" role="button">Create Admin</a>
+                </div>
+        }
+</form>
+    

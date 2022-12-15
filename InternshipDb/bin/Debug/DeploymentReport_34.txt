@@ -1,0 +1,45 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[ArchivedInterns].[StudentId] is being dropped, data loss could occur.
+       The column [dbo].[ArchivedInterns].[Term] is being dropped, data loss could occur.
+       The column [dbo].[DroppedInterns].[StudentId] is being dropped, data loss could occur.
+       The column [dbo].[DroppedInterns].[Term] is being dropped, data loss could occur.
+       The column [dbo].[Interns].[StudentId] is being dropped, data loss could occur.
+       The column [dbo].[Interns].[Term] is being dropped, data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[ArchivedInterns] (Table)
+       [dbo].[DroppedInterns] (Table)
+       [dbo].[Interns] (Table)
+       [dbo].[spAdmin_GetAllArchivedInterns] (Procedure)
+       [dbo].[spIntern_ArchiveIntern] (Procedure)
+       [dbo].[spIntern_DropIntern] (Procedure)
+       [dbo].[spIntern_AddIntern] (Procedure)
+       [dbo].[spIntern_EditIntern] (Procedure)
+       [dbo].[spIntern_GetAllInterns] (Procedure)
+       [dbo].[spIntern_GetInternById] (Procedure)
+       [dbo].[spReport_MissingESET] (Procedure)
+       [dbo].[spReport_MissingMasterclass] (Procedure)
+       [dbo].[spReport_MissingOrientation] (Procedure)
+       [dbo].[spReport_MissingResume] (Procedure)
+       [dbo].[spReport_MissingSurvey] (Procedure)
+       [dbo].[spReport_MissingThreeDocuments] (Procedure)
+
+** Supporting actions
+     Refresh
+       [dbo].[spAdmin_DropAdmin] (Procedure)
+
+The column [dbo].[ArchivedInterns].[StudentId] is being dropped, data loss could occur.
+The column [dbo].[ArchivedInterns].[Term] is being dropped, data loss could occur.
+The column [dbo].[DroppedInterns].[StudentId] is being dropped, data loss could occur.
+The column [dbo].[DroppedInterns].[Term] is being dropped, data loss could occur.
+The column [dbo].[Interns].[StudentId] is being dropped, data loss could occur.
+The column [dbo].[Interns].[Term] is being dropped, data loss could occur.
+

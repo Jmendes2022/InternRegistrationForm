@@ -1,0 +1,29 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Interns] (Table)
+
+** Supporting actions
+     Refresh
+       [dbo].[spAdmin_DropAdmin] (Procedure)
+       [dbo].[spIntern_AddIntern] (Procedure)
+       [dbo].[spIntern_ArchiveIntern] (Procedure)
+       [dbo].[spIntern_DropIntern] (Procedure)
+       [dbo].[spIntern_EditIntern] (Procedure)
+       [dbo].[spIntern_GetAllInterns] (Procedure)
+       [dbo].[spIntern_GetInternById] (Procedure)
+       [dbo].[spReport_MissingESET] (Procedure)
+       [dbo].[spReport_MissingMasterclass] (Procedure)
+       [dbo].[spReport_MissingOrientation] (Procedure)
+       [dbo].[spReport_MissingResume] (Procedure)
+       [dbo].[spReport_MissingSurvey] (Procedure)
+       [dbo].[spReport_MissingThreeDocuments] (Procedure)

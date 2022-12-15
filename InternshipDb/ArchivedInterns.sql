@@ -1,0 +1,38 @@
+﻿CREATE TABLE [dbo].[ArchivedInterns]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [FirstName] NVARCHAR(50) NOT NULL, 
+    [LastName] NVARCHAR(50) NOT NULL, 
+    [Department] NVARCHAR(50) NULL, 
+    [DegreePlan] NVARCHAR(100) NULL, 
+    [Role] NVARCHAR(50) NULL, 
+    [StartDate] DATETIME2 NULL, 
+    [EndDate] DATETIME2 NULL, 
+    [DateCreated] DATETIME2 DEFAULT GETUTCDATE(),
+    [DegreeConcentration] NVARCHAR(50) NULL, 
+    [PersonalEmail] NVARCHAR(100) NULL, 
+    [SchoolEmail] NVARCHAR(100) NULL, 
+    [InternshipEmail] NVARCHAR(100) NULL,
+    [Track] NVARCHAR(10) NULL,
+    [InviteToMeetings] BIT NULL DEFAULT 0, 
+    [Email] BIT NULL DEFAULT 0, 
+    [EntranceSurvey] BIT NULL DEFAULT 0, 
+    [WelcomeDocument] BIT NULL DEFAULT 0, 
+    [ThreeSignedDocuments] BIT NULL DEFAULT 0, 
+    [ESETTraining] BIT NULL DEFAULT 0, 
+    [Resume] BIT NULL DEFAULT 0, 
+    [Orientation1Access] BIT NULL DEFAULT 0, 
+    [Orientation2Access] BIT NULL DEFAULT 0, 
+    [TCWAccess] BIT NULL DEFAULT 0, 
+    [PlannerAccess] BIT NULL DEFAULT 0, 
+    [TeamGroupChat] BIT NULL DEFAULT 0, 
+    [OneDriveSetup] BIT NULL DEFAULT 0, 
+    [AzureSetup] BIT NULL DEFAULT 0, 
+    [ExitSurveySent] BIT NULL DEFAULT 0,
+    [Masterclass] BIT NULL DEFAULT 0,
+    [InternNotes] NVARCHAR(2000) NULL, 
+    [LastUpdatedBy] NVARCHAR(150) NULL,
+    [LastUpdate] datetime2(7) NULL DEFAULT GETUTCDATE()
+
+)
+
