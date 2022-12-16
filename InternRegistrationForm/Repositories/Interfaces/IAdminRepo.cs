@@ -16,5 +16,7 @@ namespace InternRegistrationForm.Repositories
         Task<List<AdminsModel>> GetAllAdmins();
         Task<List<InternsModel>> GetAllArchivedInterns();
         Task<List<AdminsModel>> GetAllPendingAdmins();
+        Task<InternsModel> GetArchivedInternById(int id);
+        Task<Task> ResurrectArchivedIntern(int id);
     }
 }

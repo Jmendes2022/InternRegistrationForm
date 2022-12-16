@@ -22,7 +22,7 @@
                 {
                     var indexOffset = i + 1; 
                     <tr>
-                        <th scope="row"><a asp-action="DisplayDroppedIntern" asp-route-internId="@Model[i].Id">@indexOffset</a></th>
+                        <th scope="row"><a asp-action="DisplayDroppedIntern" asp-route-Id="@Model[i].Id">@indexOffset</a></th>
                         <td>@Model[i].FirstName</td>
                         <td>@Model[i].LastName</td>
                         <td>@Model[i].Department</td>
@@ -36,21 +36,10 @@
         </table>
     </div>
     <div>
-        <h4>Welcome, @Context.Session.GetString("AdminFirstName")! Choose an option Below!</h4>
+        <h4>Welcome, @Context.Session.GetString("AdminFirstName")!</h4>
     </div>
     <div class="my-5" style="text-align: center">
-        <div class="my-2" style="text-align: center">
-            <table style="margin-left: auto; margin-right: auto;">
-                <tr class="row-cols-sm-6">
-                    <td style="padding: 20px;">
-                        <a class="btn btn-primary my-2" asp-action="AdminIndex" style="width: 100%; height: 50%; col-4" role="button">Home Page</a>
-                    </td>
-                    <td style="padding: 20px;">
-                        <a class="btn btn-primary my-2" asp-action="ResurrectIntern" style="width: 100%; height: 50%; col-4" role="button">Resurrect Intern</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
+          <a class="btn btn-primary my-2" asp-action="AdminIndex" style="width: 30%; height: 50%; col-4" role="button">Home Page</a>
     </div>
 </div>
 

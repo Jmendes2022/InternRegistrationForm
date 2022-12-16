@@ -96,6 +96,11 @@
     <Build Include="StoredProcedures\spAdmin_AcceptPendingAdminById.sql" />
     <Build Include="StoredProcedures\spAdmin_GetAllPendingAdmins.sql" />
     <Build Include="StoredProcedures\spAdmin_DeletePendingAdmin.sql" />
+    <Build Include="StoredProcedures\spIntern_GetDroppedInternById.sql" />
+    <Build Include="StoredProcedures\spIntern_GetAllDroppedInterns_1.sql" />
+    <Build Include="StoredProcedures\spIntern_ResurrectIntern.sql" />
+    <Build Include="StoredProcedures\spAdmin_GetArchivedInternById.sql" />
+    <Build Include="StoredProcedures\spAdmin_ResurrectArchivedIntern.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishProfile\InternshipDb.publish.xml" />

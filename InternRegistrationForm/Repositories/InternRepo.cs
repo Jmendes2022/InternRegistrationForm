@@ -104,6 +104,24 @@ namespace InternRegistrationForm.Repositories
 
         }
 
+        public async Task<InternsModel> GetDroppedInternById(int id)
+        {
+            string connString = _config.GetConnectionString("InternshipDb");
+            using IDbConnection dbConnection = new SqlConnection(connString);
+
+            InternsModel droppedIntern = await dbConnection.QuerySingleOrDefaultAsync<InternsModel>("spIntern_GetDroppedInternById", new { Id = id }, commandType: CommandType.StoredProcedure);
+
+            return droppedIntern;
+        }
+
+        public async void ResurrectIntern(int id)
+        {
+            string connString = _config.GetConnectionString("InternshipDb");
+            using IDbConnection dbConnection = new SqlConnection(connString);
+
+            await dbConnection.QuerySingleOrDefaultAsync<InternsModel>("spIntern_ResurrectIntern", new { Id = id }, commandType: CommandType.StoredProcedure);
+        }
+
         public async Task<List<InternsModel>> GetAllDroppedInterns()
         {
             string connString = _config.GetConnectionString("InternshipDb");

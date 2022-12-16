@@ -1,0 +1,43 @@
+﻿CREATE PROCEDURE [dbo].[spIntern_GetDroppedInternById]
+	@Id int
+AS
+BEGIN
+	SELECT
+		[Id], 
+		[FirstName], 
+		[LastName], 
+		[Department], 
+		[DegreePlan], 
+		[Role], 
+		[StartDate], 
+		[EndDate], 
+		[DateCreated], 
+		[DegreeConcentration], 
+		[PersonalEmail], 
+		[SchoolEmail], 
+		[InternshipEmail], 
+		[Track], 
+		[InviteToMeetings], 
+		[Email], 
+		[EntranceSurvey], 
+		[WelcomeDocument], 
+		[ThreeSignedDocuments], 
+		[ESETTraining], 
+		[Resume], 
+		[Orientation1Access], 
+		[Orientation2Access], 
+		[TCWAccess], 
+		[PlannerAccess], 
+		[TeamGroupChat], 
+		[OneDriveSetup], 
+		[AzureSetup], 
+		[ExitSurveySent], 
+		[Masterclass], 
+		[InternNotes], 
+		[LastUpdatedBy], 
+		[LastUpdate]
+	FROM
+		DroppedInterns
+	WHERE
+		Id = @Id;
+END

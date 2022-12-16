@@ -14,7 +14,3 @@ C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1
 C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\InternshipDb.sqlproj.AssemblyReference.cache
 C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\InternshipDb.dll
 C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\InternshipDb.pdb
-C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\Model.xml
-C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\refactor.xml
-C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\postdeploy.sql
-C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\predeploy.sql

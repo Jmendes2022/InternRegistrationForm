@@ -29,6 +29,20 @@ namespace InternRegistrationForm.Controllers
             return View(termDates);
         }
 
+        public IActionResult ResurrectIntern(int id)
+        {
+             _internRepo.ResurrectIntern(id);
+
+            return RedirectToAction(nameof(AdminIndex));
+        }
+
+        public async Task<IActionResult> DisplayDroppedIntern(int id)
+        { 
+            InternsModel droppedIntern = await _internRepo.GetDroppedInternById(id);
+
+            return View(droppedIntern);
+        }
+
         public IActionResult DeleteTerm(int id)
         { 
             _termDatesRepo.DeleteTerm(id);
@@ -36,7 +50,7 @@ namespace InternRegistrationForm.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> AddTerm()
+        public IActionResult AddTerm()
         {
             return View();
         }
@@ -122,9 +136,11 @@ namespace InternRegistrationForm.Controllers
                 }
                 else
                 {
-                    HttpContext.Session.SetString("AdminFirstName", admin.FirstName);
-                    HttpContext.Session.SetString("AdminLastName", admin.LastName);
-                    HttpContext.Session.SetInt32("AdminId", admin.Id);
+                   
+                        HttpContext.Session.SetString("AdminFirstName", admin.FirstName);
+                        HttpContext.Session.SetString("AdminLastName", admin.LastName);
+                        HttpContext.Session.SetInt32("AdminId", admin.Id);
+                        HttpContext.Session.SetString("HasPermissions", admin.HasPermissions.ToString());
 
                     logInModel.LoggedAttemptFailed = false;
                     return RedirectToAction(nameof(AdminIndex));
@@ -154,6 +170,20 @@ namespace InternRegistrationForm.Controllers
             }
 
             _internRepo.DropIntern(internId);
+
+            return RedirectToAction(nameof(AdminIndex));
+        }
+
+        public async Task<IActionResult> DisplayArchivedIntern(int internId)
+        {
+            var archivedIntern = await _adminRepo.GetArchivedInternById(internId);
+
+            return View(archivedIntern);
+        }
+
+        public  IActionResult ResurrectArchivedIntern(int id)
+        {
+            _adminRepo.ResurrectArchivedIntern(id);
 
             return RedirectToAction(nameof(AdminIndex));
         }

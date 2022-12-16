@@ -10,6 +10,8 @@ namespace InternRegistrationForm.Repositories
         void EditIntern(InternsModel intern);
         Task<List<InternsModel>> GetAllDroppedInterns();
         Task<List<InternsModel>> GetAllInterns();
+        Task<InternsModel> GetDroppedInternById(int id);
         Task<InternsModel> GetInternById(int id);
+        void ResurrectIntern(int id);
     }
 }

@@ -1,0 +1,219 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model InternsModel
+
+<div>
+    <div class="text-centered row my-5">
+        <h2>Information for Intern: &nbsp; @Model.FirstName @Model.LastName</h2>
+        <h6>Last updated by: @Model.LastUpdatedBy on @Model.LastUpdate.Value.ToString("MM-dd-yyyy")</h6>       
+    </div>
+    <div class="row" style="text-align: center">
+                <div class="mb-3 col-3">
+                    <label class="form-label mb-2">First Name</label>
+                    <input type="text" class="form-control mb-4" style="background: white" value="@Model.FirstName" readonly>
+                </div>
+        <div class="mb-3 col-3">
+                    <label class="form-label mb-2">Last Name</label>
+                    <input type="text" class="form-control mb-4" style="background: white" value="@Model.LastName" readonly>
+                </div>
+         <div class="mb-3 col-3">
+                    <label class="form-label mb-2">Internship Start Date: &nbsp;</label>
+                    <input type="text" class="form-control mb-4" style="background: white" value="@Model.StartDate.Value.ToString("MM-dd-yyyy")" readonly>
+                </div>
+                <div class="mb-3 col-3">
+                    <label class="form-label mb-2">Internship End Date: &nbsp;</label>
+                    <input type="text" class="form-control mb-4" style="background: white" value="@Model.EndDate.Value.ToString("MM-dd-yyyy")" readonly>
+                </div>
+    </div>
+    <div class="row mb-3" style="text-align: center">
+        <div class="col-4">
+            <label class="form-label mb-2">Department: &nbsp;</label>
+            <input type="text" class="form-control mb-4" style="background: white" value="@Model.Department" readonly>
+        </div>
+        <div class="col-4">
+             <label class="form-label mb-2">Degree Plan: &nbsp;</label>
+            <input type="text" class="form-control mb-4" style="background: white" value="@Model.DegreePlan" readonly>
+        </div>
+        <div class="col-4">
+             <label class="form-label mb-2">Role: &nbsp;</label>
+            <input type="text" class="form-control mb-4" style="background: white" value="@Model.Role" readonly>
+        </div>
+    </div>
+    <div class="row">
+             <div class="col-4">
+                 <label class="form-label mb-2">Track: &nbsp;</label>
+                <input type="text" class="form-control mb-4" style="background: white" value="@Model.Track" readonly>
+    </div>
+    <div class="row mb-3" style="text-align: center">
+                <div class="mb-3 col-4">
+                    <label class="form-label mb-2">PGIP Email: &nbsp;</label>
+                    <input type="text" class="form-control mb-4" style="background: white" value="@Model.InternshipEmail" readonly>
+                </div>
+                <div class="mb-3 col-4">
+                    <label class="form-label mb-2">Personal Email: &nbsp;</label>
+                    <input type="text" class="form-control mb-4" style="background: white" value="@Model.PersonalEmail" readonly>
+                </div>
+                <div class="mb-3 col-4">
+                    <label class="form-label mb-2">School Email: &nbsp;</label>
+                    <input type="text" class="form-control mb-4" style="background: white" value="@Model.SchoolEmail" readonly>
+                </div>
+   </div>
+   <div class="row mb-3" style="text-align: center">
+                <div class="mb-3 col-4">
+                    <label class="form-label mb-2">Concentration: &nbsp;</label>
+                    <input type="text" class="form-control mb-4" style="background: white" value="@Model.DegreeConcentration" readonly>
+                </div>     
+        <div class="mb-3 col-8">
+                    <label class="form-label mb-2">Notes: &nbsp;</label>
+                    <textarea type="text" class="form-control mb-4" style="background: white" readonly>@Model.InternNotes</textarea>
+                </div>
+   </div>
+   <div class="my-5">
+                <table class="table my-5">
+                  <thead>
+                    <h3 style="text-align: center">Completed Intern Tasks</h3>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input class="form-check-input" type="checkbox" value="true" asp-for="InviteToMeetings" disabled>
+                        <input class="form-check-input" type="hidden" value="false" asp-for="InviteToMeetings" disabled>
+                        <label class="form-check-label" asp-for="InviteToMeetings">
+                        Invite To Meetings &nbsp;
+                        </label> 
+                      </td>
+                      <td>
+                        <input class="form-check-input" type="checkbox" value="true" asp-for="Email" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="Email" disabled>
+                            <label class="form-check-label" asp-for="Email">
+                            Email &nbsp;
+                            </label>
+                      </td>
+                      <td>
+                        <input class="form-check-input" type="checkbox" value="true" asp-for="EntranceSurvey" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="EntranceSurvey" disabled>
+                            <label class="form-check-label" asp-for="EntranceSurvey">
+                            Entrance Survey &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="WelcomeDocument" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="WelcomeDocument" disabled>
+                            <label class="form-check-label" asp-for="WelcomeDocument">
+                            Welcome Document &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="ThreeSignedDocuments" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="ThreeSignedDocuments" disabled>
+                            <label class="form-check-label" asp-for="ThreeSignedDocuments">
+                            Three Signed Documents &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="ESETTraining" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="ESETTraining" disabled>
+                            <label class="form-check-label" asp-for="ESETTraining">
+                            ESET Training &nbsp;
+                            </label> 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="Resume" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="Resume" disabled>
+                            <label class="form-check-label" asp-for="Resume">
+                            Resume &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="Orientation1Access" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="Orientation1Access" disabled>
+                            <label class="form-check-label" asp-for="Orientation1Access">
+                            Orientation 1 Access &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="Orientation2Access" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="Orientation2Access" disabled>
+                            <label class="form-check-label" asp-for="Orientation2Access">
+                            Orientation 2 Access &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="TCWAccess" disabled> 
+                            <input class="form-check-input" type="hidden" value="false" asp-for="TCWAccess" disabled>
+                            <label class="form-check-label" asp-for="TCWAccess">
+                            TCW Access &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="PlannerAccess" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="PlannerAccess" disabled>
+                            <label class="form-check-label" asp-for="PlannerAccess">
+                            Planner Access &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="TeamGroupChat" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="TeamGroupChat" disabled>
+                            <label class="form-check-label" asp-for="TeamGroupChat">
+                            Team Group Chat &nbsp;
+                            </label> 
+                      </td>
+                    </tr>
+                    <tr style="margin-left: auto; margin-right: auto;">
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="OneDriveSetup" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="OneDriveSetup" disabled>
+                            <label class="form-check-label" asp-for="OneDriveSetup">
+                            OneDrive Setup &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input" type="checkbox" value="true" asp-for="AzureSetup" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="AzureSetup" disabled>
+                            <label class="form-check-label" asp-for="AzureSetup">
+                            Azure Setup &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input"  type="checkbox" value="true" asp-for="ExitSurveySent" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="ExitSurveySent" disabled>
+                            <label class="form-check-label" asp-for="ExitSurveySent">
+                            Exit Survery Sent &nbsp;
+                            </label> 
+                      </td>
+                      <td>
+                            <input class="form-check-input"  type="checkbox" value="true" asp-for="Masterclass" disabled>
+                            <input class="form-check-input" type="hidden" value="false" asp-for="Masterclass" disabled>
+                            <label class="form-check-label" asp-for="Masterclass">
+                            Masterclass Presentation &nbsp;
+                            </label> 
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+    
+        @if (Context.Session.GetString("HasPermissions") == true.ToString())
+        {
+            <div class="row">
+                 <div class="col" style="text-align: center;">
+                     <label>This button will restore this Intern where they left off! <br><b><u><i>Make sure that this is what you want!</i></u></b></label>
+                     <a class="btn btn-primary mt-3 col-6" asp-action="ResurrectArchivedIntern"  asp-route-Id="@Model.Id" role="button">Resurrect Intern</a>
+                 </div>
+                 <div class="col mt-3">
+                     <a class="btn btn-primary col-auto my-5" asp-action="AdminIndex" role="button">Go Home</a>
+                 </div>
+            </div>
+            }
+            else
+            {
+                <div class="col-2 row">
+                     <a class="btn btn-primary col-auto" asp-action="AdminIndex" role="button">Go Home</a>
+                </div>
+            }
