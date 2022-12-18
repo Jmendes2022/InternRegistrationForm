@@ -126,7 +126,7 @@ namespace InternRegistrationForm.Repositories
             string connString = _config.GetConnectionString("InternshipDb");
             using IDbConnection dbConnection = new SqlConnection(connString);
 
-            InternsModel archivedIntern = await dbConnection.QuerySingleOrDefaultAsync<InternsModel>("spAdmin_GetArchivedInternById", new { Id = id }, commandType: CommandType.StoredProcedure);
+            InternsModel archivedIntern = await dbConnection.QuerySingleOrDefaultAsync<InternsModel>("spAdmin_GetArchivedInternById", new { id = id }, commandType: CommandType.StoredProcedure);
 
             return archivedIntern;
         }
@@ -136,7 +136,7 @@ namespace InternRegistrationForm.Repositories
             string connString = _config.GetConnectionString("InternshipDb");
             using IDbConnection dbConnection = new SqlConnection(connString);
 
-            await dbConnection.QuerySingleOrDefaultAsync<int>("spAdmin_ResurrectArchivedIntern", new { Id = id }, commandType: CommandType.StoredProcedure);
+            await dbConnection.QuerySingleOrDefaultAsync<int>("spAdmin_ResurrectArchivedIntern", new { id = id }, commandType: CommandType.StoredProcedure);
             return Task.CompletedTask;
         }
 

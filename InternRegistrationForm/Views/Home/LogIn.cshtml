@@ -6,7 +6,7 @@
     <h1>Log in Here!</h1>
 </div>
 
-<form method="post" asp-action="LogIn">
+<form method="post" asp-action="LogIn" asp-controller="Home" >
     <div class="mb-3 row">
         <label for="staticEmail" class="col-sm-0 col-form-label">Username: &nbsp;</label>
         <div class="col-sm-4 mb-3 mt-1">
@@ -31,8 +31,15 @@
     @if (Model.AllAdmins.Count() > 0) 
         {
                 <div style="text-align: center">
-                  <a class="btn btn-primary" style="width: 20%" asp-action="AdminRegistration" role="button">Create Admin</a>
+                  <a class="btn btn-primary" style="width: 20%" asp-action="AdminRegistration" asp-controller="Admin" role="button">Create Admin</a>
                 </div>
         }
+
+    @if (Model.AllAdmins.Count() == 0)
+    {
+                <div style="text-align: center">
+                     <a class="btn btn-primary" style="width: 20%" asp-action="AddMasterAdmin" asp-controller="Admin" role="button">Create Master Admin</a>
+                </div>
+    }
 </form>
     

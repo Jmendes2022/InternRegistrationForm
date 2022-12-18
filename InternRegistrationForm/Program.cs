@@ -4,11 +4,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<IInternRepo, InternRepo>();
-builder.Services.AddSingleton<IAdminRepo, AdminRepo>();
-builder.Services.AddSingleton<IReportRepo, ReportRepo>();
-builder.Services.AddSingleton<ITermDatesRepo, TermDatesRepo>();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddTransient<IInternRepo, InternRepo>();
+builder.Services.AddTransient<IAdminRepo, AdminRepo>();
+builder.Services.AddTransient<IReportRepo, ReportRepo>();
+builder.Services.AddTransient<ITermDatesRepo, TermDatesRepo>();
+builder.Services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {

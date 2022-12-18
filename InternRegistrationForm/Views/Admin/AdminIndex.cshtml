@@ -1,0 +1,95 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model AdminIndexViewModel
+@{
+}
+
+<div class="text-center">
+    <div class="row">
+        @if (Model.PendingAdminsList.Count() == 0 || Model.PendingAdminsList == null)
+        {
+            <div>
+                <h1 class="display-4 mb-5 ">Current Enrolled Interns</h1>
+            </div>
+        }
+        else 
+        {
+            
+                <div style="text-align: center">
+                    <h1 class="display-4 mb-5" style="text-align: center">Current Enrolled Interns</h1>
+                </div>
+                <span class="alert alert-primary col-5" style="margin-right: auto; margin-left: auto;" role="alert">
+                     There are currently @Model.PendingAdminsList.Count() admins pending! &nbsp;<a asp-action="PendingAdminsListView" asp-controller="PendingAdmins" class="alert-link">Click here</a> to view.
+                </span>
+        }
+    
+    <div class="my-5">
+        <table class="table table-sm table-bordered table-striped" id="tblAdminIndex">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Degree Plan</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Track</th>
+                    <th scope="col">PGIP Email</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Last Updated</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (var i = 0; i < Model.interns?.Count(); i++)
+                {
+                    var indexOffset = i + 1; 
+                    <tr>
+                        <th scope="row"><a asp-action="DisplayIntern" asp-controller="Intern" asp-route-internId="@Model.interns[i].Id">@indexOffset</a></th>
+                        <td>@Model.interns[i].FirstName<br />@Model.interns[i].LastName</td>
+                        <td>@Model.interns[i].Department</td>
+                        <td>@Model.interns[i].DegreePlan</td>
+                        <td>@Model.interns[i].Role</td>
+                        <td>@Model.interns[i].Track</td>
+                        <td>@Model.interns[i].InternshipEmail</td>
+                        <td>@Model.interns[i].StartDate.Value.ToString("MM-dd-yyyy")</td>
+                        <td>@Model.interns[i].EndDate.Value.ToString("MM-dd-yyyy")</td>
+                        <td>@Model.interns[i].LastUpdate.Value.ToString("MM-dd-yyyy")<br />By:<br />@Model.interns[i].LastUpdatedBy</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h4>Welcome, @Context.Session.GetString("AdminFirstName")! Choose an option Below!</h4>
+    </div>
+    <div class="my-5" style="text-align: center">
+        <div class="my-2" style="text-align: center">
+            <table style="margin-left: auto; margin-right: auto;">
+                <tr class="row-cols-sm-6">
+                    <td style="padding: 20px;">
+                        <a class="btn btn-primary my-2" asp-action="Registration" asp-controller="Intern" style="width: 100%; height: 50%; col-4" role="button">Add an Intern</a>
+                    </td>
+                    <td style="padding: 20px;">
+                        <a class="btn btn-primary my-2" asp-action="AdminsList" asp-controller="Admin" style="width: 100%; height: 50%; col-4" role="button">View Admins List</a>
+                    </td>
+                    <td style="padding: 20px;">
+                        <a class="btn btn-primary my-2" asp-action="ArchivedInternsList" asp-controller="Intern" style="width: 100%; height: 50%; col-4" role="button">Archived Interns List</a>
+                    </td>
+                    <td style="padding: 20px;">
+                        <a class="btn btn-primary my-2" asp-action="DroppedInterns" asp-controller="Intern" style="width: 100%; height: 50%; col-4" role="button">Dropped Interns List</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script>
+        $(()=>{
+            $('#tblAdminIndex').DataTable();
+        })
+    </script>
+}

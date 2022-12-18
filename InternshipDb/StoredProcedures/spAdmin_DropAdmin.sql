@@ -4,8 +4,7 @@
 AS
 BEGIN
 	INSERT INTO DroppedAdmins
-	(
-		Id,
+	(		
 		FirstName,
 		LastName,
 		Department,
@@ -13,8 +12,7 @@ BEGIN
 		[Password],
 		HasPermissions
 	)
-	SELECT
-		[Id], 
+	SELECT 
 		[FirstName], 
 		[LastName], 
 		[Department], 
@@ -25,9 +23,9 @@ BEGIN
 		Admins
 	WHERE
 		Id = @Id;
-
 	DELETE FROM
-		Interns
+		Admins
 	WHERE
-		Id = @Id;
+		Id = @Id
+	SELECT SCOPE_IDENTITY();
 END

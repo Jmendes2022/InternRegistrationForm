@@ -23,16 +23,16 @@
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AdminIndex">Home</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AdminIndex">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registration">Add an Intern</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Inter" asp-action="Registration">Add an Intern</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Report" asp-action="Index">Reports</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TermDates">Term Dates</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Term" asp-action="TermDates">Term Dates</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark disabled" style="font-size:large; text-align:justify-all">Hi @Context.Session.GetString("AdminFirstName")! &nbsp;&nbsp; Not you? -</a>
@@ -56,7 +56,7 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registration">Add an Intern</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Intern" asp-action="Registration">Add an Intern</a>
                             </li>
                             <li>
                                 <a class="nav-link text-dark justify-content-end" style="position:relative; align-content:end" asp-action="LogIn">Log-In</a>
@@ -75,7 +75,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - InternRegistrationForm - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            Developed by Jordan Mendes || 2022 - PGIP-LLC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

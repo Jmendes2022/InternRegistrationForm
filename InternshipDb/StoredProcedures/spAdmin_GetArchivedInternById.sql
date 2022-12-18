@@ -2,8 +2,8 @@
 	@Id int
 AS
 BEGIN
-	SELECT
-		[Id], 
+	SELECT 
+		[Id],
 		[FirstName], 
 		[LastName], 
 		[Department], 

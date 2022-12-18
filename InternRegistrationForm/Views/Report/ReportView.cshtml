@@ -23,7 +23,7 @@
                 {
                     var indexOffset = i + 1; 
                     <tr>
-                        <th scope="row"><a asp-action="DisplayIntern" asp-controller="Home" asp-route-internId="@Model.Interns[i].Id">@indexOffset</a></th>
+                        <th scope="row"><a asp-action="DisplayIntern" asp-controller="Intern" asp-route-internId="@Model.Interns[i].Id">@indexOffset</a></th>
                         <td>@Model.Interns[i].FirstName<br />@Model.Interns[i].LastName</td>
                         <td>@Model.Interns[i].Department</td>
                         <td>@Model.Interns[i].DegreePlan</td>
@@ -39,7 +39,7 @@
         </table>
     </div>
     <div>
-           <a class="btn btn-primary" asp-action="AdminIndex" asp-controller="Home" style="width: 20%" role="button">Go Home</a>
+           <a class="btn btn-primary" asp-action="AdminIndex" asp-controller="Admin" style="width: 20%" role="button">Go Home</a>
            <a class="btn btn-primary" asp-action="Index" asp-controller="Report" style="width: 20%" role="button">Back to Reports</a>
     </div>
 </div>

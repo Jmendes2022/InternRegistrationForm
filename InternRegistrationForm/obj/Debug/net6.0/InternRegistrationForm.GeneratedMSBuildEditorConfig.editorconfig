@@ -15,56 +15,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternRegistrationForm
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/AddAdmin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRBZG1pbi5jc2h0bWw=
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Admin/AddAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/AddTerm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRUZXJtLmNzaHRtbA==
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Admin/AddMasterAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTWFzdGVyQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/AdminIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbkluZGV4LmNzaHRtbA==
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Admin/AdminIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/AdminsList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbnNMaXN0LmNzaHRtbA==
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Admin/AdminsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5zTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/ArchivedInternsList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcmNoaXZlZEludGVybnNMaXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/DisplayArchivedIntern.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5QXJjaGl2ZWRJbnRlcm4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/DisplayDroppedIntern.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5RHJvcHBlZEludGVybi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/DisplayIntern.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5SW50ZXJuLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/DroppedInterns.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEcm9wcGVkSW50ZXJucy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/EditAdmin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0QWRtaW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/EditIntern.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0SW50ZXJuLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/EditSingleTermDate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0U2luZ2xlVGVybURhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/EditTermDates.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0VGVybURhdGVzLmNzaHRtbA==
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Admin/EditAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/Index.cshtml]
@@ -79,24 +47,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dPdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/PendingAdminAddedView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZW5kaW5nQWRtaW5BZGRlZFZpZXcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/PendingAdminsListView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZW5kaW5nQWRtaW5zTGlzdFZpZXcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/Registration.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Intern/ArchivedInternsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuXEFyY2hpdmVkSW50ZXJuc0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Home/TermDates.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXJtRGF0ZXMuY3NodG1s
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Intern/DisplayArchivedIntern.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuXERpc3BsYXlBcmNoaXZlZEludGVybi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Intern/DisplayDroppedIntern.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuXERpc3BsYXlEcm9wcGVkSW50ZXJuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Intern/DisplayIntern.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuXERpc3BsYXlJbnRlcm4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Intern/DroppedInterns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuXERyb3BwZWRJbnRlcm5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Intern/EditIntern.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuXEVkaXRJbnRlcm4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Intern/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuXFJlZ2lzdHJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/PendingAdmins/PendingAdminAddedView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVuZGluZ0FkbWluc1xQZW5kaW5nQWRtaW5BZGRlZFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/PendingAdmins/PendingAdminsListView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVuZGluZ0FkbWluc1xQZW5kaW5nQWRtaW5zTGlzdFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Report/Index.cshtml]
@@ -137,6 +125,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Term/AddTerm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVybVxBZGRUZXJtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Term/EditSingleTermDate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVybVxFZGl0U2luZ2xlVGVybURhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Term/EditTermDates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVybVxFZGl0VGVybURhdGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/Term/TermDates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVybVxUZXJtRGF0ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Water/OneDrive/Desktop/PGIP Projects/InternRegistrationForm11-27-2022(1)/InternRegistrationForm/InternRegistrationForm/Views/_ViewImports.cshtml]

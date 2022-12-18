@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<InternsModel>
+<div class="text-center">
+    <h1 class="display-4 mb-5">All Archived Interns</h1>    
+    <div class="my-5">
+        <table class="table table-sm table-bordered table-striped" id="tblArchivedInterns">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Degree Plan</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Track</th>
+                    <th scope="col">PGIP Email</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Last Updated</th>
+                </tr>
+            </thead>
+            <tbody>         
+                @for (var i = 0; i < Model.Count(); i++)
+                {
+                        var indexOffset = i + 1;
+
+                    <tr>
+                        <th scope="row"><a asp-action="DisplayArchivedIntern" asp-controller="Intern" asp-route-internId="@Model[i].Id">@indexOffset</a></th>
+                        <td>@Model[i].FirstName<br />@Model[i].LastName</td>
+                        <td>@Model[i].Department</td>
+                        <td>@Model[i].DegreePlan</td>
+                        <td>@Model[i].Role</td>
+                        <td>@Model[i].Track</td>
+                        <td>@Model[i].InternshipEmail</td>
+                        <td>@Model[i].StartDate.Value.ToString("MM-dd-yyyy")</td>
+                        <td>@Model[i].EndDate.Value.ToString("MM-dd-yyyy")</td>
+                        <td>@Model[i].LastUpdate.Value.ToString("MM-dd-yyyy")<br />By:<br />@Model[i].LastUpdatedBy</td>
+                    </tr>
+                }  
+            </tbody>
+        </table>
+    </div>
+    <div style="text-align: center;">
+        <a class="btn btn-primary" style="width: 20%" asp-action="AdminIndex" asp-controller="Admin" role="button">Return Home</a>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script>
+        $(()=>{
+            $('#tblArchivedInterns').DataTable();
+        })
+    </script>
+}
