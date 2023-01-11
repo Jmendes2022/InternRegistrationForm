@@ -4,7 +4,10 @@
 	@Department nvarchar(50),
 	@Username nvarchar(50),
 	@Password nvarchar(MAX),
-	@HasPermissions bit
+	@PermissionsLevel int,
+	@InternshipEmail nvarchar(50),
+	@SchoolEmail nvarchar(50),
+	@PersonalEmail nvarchar(50)
 AS
 BEGIN
 	INSERT INTO PendingAdmins
@@ -14,7 +17,10 @@ BEGIN
 		Department,
 		Username,
 		[Password],
-		HasPermissions
+		PermissionsLevel,
+		InternshipEmail,
+		SchoolEmail,
+		PersonalEmail
 	)
 	VALUES
 	(
@@ -23,7 +29,10 @@ BEGIN
 		@Department,
 		@Username,
 		@Password,
-		@HasPermissions
+		@PermissionsLevel,
+		@InternshipEmail,
+		@SchoolEmail,
+		@PersonalEmail
 	)
 	SELECT SCOPE_IDENTITY();
 END

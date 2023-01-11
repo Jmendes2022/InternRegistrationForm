@@ -10,7 +10,10 @@ BEGIN
 		[Department], 
 		[Username], 
 		[Password],
-		HasPermissions
+		[PermissionsLevel],
+		[InternshipEmail],
+		[SchoolEmail],
+		[PersonalEmail]
 	FROM
 		Admins
 	WHERE

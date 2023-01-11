@@ -6,5 +6,8 @@
     [Department] NVARCHAR(50) NOT NULL, 
     [Username] NVARCHAR(50) NOT NULL, 
     [Password] NVARCHAR(MAX) NOT NULL, 
-    [HasPermissions] BIT NULL DEFAULT 0
+    [PermissionsLevel] INT NULL DEFAULT 0, 
+    [InternshipEmail] NVARCHAR(50) NULL, 
+    [SchoolEmail] NVARCHAR(50) NULL, 
+    [PersonalEmail] NVARCHAR(50) NULL
 )

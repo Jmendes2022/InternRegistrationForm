@@ -18,3 +18,9 @@ C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1
 C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\refactor.xml
 C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\postdeploy.sql
 C:\Users\Water\OneDrive\Desktop\PGIP Projects\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\predeploy.sql
+C:\Users\Water\OneDrive\Desktop\InternRegistrationForm11-27-2022(1) (1)\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\bin\Debug\InternshipDb.dacpac
+C:\Users\Water\OneDrive\Desktop\InternRegistrationForm11-27-2022(1) (1)\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\bin\Debug\InternshipDb.dll
+C:\Users\Water\OneDrive\Desktop\InternRegistrationForm11-27-2022(1) (1)\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\bin\Debug\InternshipDb.pdb
+C:\Users\Water\OneDrive\Desktop\InternRegistrationForm11-27-2022(1) (1)\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\InternshipDb.sqlproj.AssemblyReference.cache
+C:\Users\Water\OneDrive\Desktop\InternRegistrationForm11-27-2022(1) (1)\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\InternshipDb.dll
+C:\Users\Water\OneDrive\Desktop\InternRegistrationForm11-27-2022(1) (1)\InternRegistrationForm11-27-2022(1)\InternRegistrationForm\InternshipDb\obj\Debug\InternshipDb.pdb

@@ -37,6 +37,24 @@
                         <option value="ACT/GITA5G">ACT/GITA5G</option>
                     </select>
                 </div>
+                <div class="mb-3">
+                    <label asp-for="InternshipEmail" class="form-label mb-2">Internship Email:</label>
+                    <input type="text" class="form-control mb-4" required asp-for="InternshipEmail" placeholder="Internship Email here..." aria-describedby="Last Name">
+                </div><div class="mb-3">
+                    <label asp-for="SchoolEmail" class="form-label mb-2">School Email:</label>
+                    <input type="text" class="form-control mb-4" required asp-for="SchoolEmail" placeholder="School Email here..." aria-describedby="Last Name">
+                </div><div class="mb-3">
+                    <label asp-for="PersonalEmail" class="form-label mb-2">Personal Email:</label>
+                    <input type="text" class="form-control mb-4" required asp-for="PersonalEmail" placeholder="Personal Email..." aria-describedby="Last Name">
+                </div>
+                <div class="my-3">
+                    <label asp-for="PermissionsLevel" class="form-label my-2">Permissions Level</label>
+                    <select class="form-select" asp-for="PermissionsLevel" required placeholder="Select an Option">
+                        <option value="2" selected >Full Permissions</option>
+                        <option value="1">Editing Only</option>
+                        <option value="0">No Permissions</option>
+                    </select>
+                </div>
                 <div class="text-center my-5">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

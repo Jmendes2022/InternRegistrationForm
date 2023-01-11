@@ -1,12 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
-
 @model List<AdminsModel>
-@{
-}
 
 <div class="text-center">
     <h1 class="display-4 mb-5">All Pending Admins</h1>
@@ -19,6 +14,9 @@
                     <th scope="col">Last Name</th>
                     <th scope="col">Username</th>
                     <th scope="col">Department</th>
+                    <th scope="col">Internship Email</th>
+                    <th scope="col">School Email</th>
+                    <th scope="col">Personal Email</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,6 +28,9 @@
                         <td>@Model[i].LastName</td>
                         <td>@Model[i].Username</td>
                         <td>@Model[i].Department</td>
+                        <td>@Model[i].InternshipEmail</td>
+                        <td>@Model[i].SchoolEmail</td>
+                        <td>@Model[i].PersonalEmail</td>
                     </tr>
                 }
             </tbody>

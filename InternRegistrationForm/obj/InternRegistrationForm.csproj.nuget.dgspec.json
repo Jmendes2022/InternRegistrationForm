@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Water\\OneDrive\\Desktop\\PGIP Projects\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\InternRegistrationForm.csproj": {}
+    "C:\\Users\\Water\\OneDrive\\Desktop\\InternRegistrationForm11-27-2022(1) (1)\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\InternRegistrationForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Water\\OneDrive\\Desktop\\PGIP Projects\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\InternRegistrationForm.csproj": {
+    "C:\\Users\\Water\\OneDrive\\Desktop\\InternRegistrationForm11-27-2022(1) (1)\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\InternRegistrationForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Water\\OneDrive\\Desktop\\PGIP Projects\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\InternRegistrationForm.csproj",
+        "projectUniqueName": "C:\\Users\\Water\\OneDrive\\Desktop\\InternRegistrationForm11-27-2022(1) (1)\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\InternRegistrationForm.csproj",
         "projectName": "InternRegistrationForm",
-        "projectPath": "C:\\Users\\Water\\OneDrive\\Desktop\\PGIP Projects\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\InternRegistrationForm.csproj",
+        "projectPath": "C:\\Users\\Water\\OneDrive\\Desktop\\InternRegistrationForm11-27-2022(1) (1)\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\InternRegistrationForm.csproj",
         "packagesPath": "C:\\Users\\Water\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Water\\OneDrive\\Desktop\\PGIP Projects\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\obj\\",
+        "outputPath": "C:\\Users\\Water\\OneDrive\\Desktop\\InternRegistrationForm11-27-2022(1) (1)\\InternRegistrationForm11-27-2022(1)\\InternRegistrationForm\\InternRegistrationForm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Water\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -2,9 +2,18 @@
 @{
 }
 <div style="text-align: center">
-    <div class="row my-5">
-        <h1>You have been successfully added!</h1>
-    </div>
+    @if (@ViewBag.FirstName != null)
+    {
+        <div class="row my-5">
+            <h1>@ViewBag.FirstName, You have been successfully added!</h1>
+        </div>
+    }
+    else
+    {
+        <div class="row my-5">
+            <h1>You have been successfully added!</h1>
+        </div>
+    }
     <div class="row my-5">
         <h6>You will be contacted by an admin if there is any other information needed!</h6>
     </div>

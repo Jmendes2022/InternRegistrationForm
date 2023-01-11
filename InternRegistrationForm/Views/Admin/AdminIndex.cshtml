@@ -13,14 +13,19 @@
                 <h1 class="display-4 mb-5 ">Current Enrolled Interns</h1>
             </div>
         }
-        else 
+        @if (ViewBag.Message != null)
         {
-            
-                <div style="text-align: center">
-                    <h1 class="display-4 mb-5" style="text-align: center">Current Enrolled Interns</h1>
-                </div>
-                <span class="alert alert-primary col-5" style="margin-right: auto; margin-left: auto;" role="alert">
-                     There are currently @Model.PendingAdminsList.Count() admins pending! &nbsp;<a asp-action="PendingAdminsListView" asp-controller="PendingAdmins" class="alert-link">Click here</a> to view.
+            <div class="alert alert-primary" role="alert">
+                @ViewBag.Message
+            </div>
+        }
+        else if (Model.PendingAdminsList.Count() > 0 && Context.Session.GetInt32("PermissionsLevel") == 2)
+        {
+            <div style="text-align: center">
+                <h1 class="display-4 mb-5" style="text-align: center">Current Enrolled Interns</h1>
+            </div>
+            <span class="alert alert-primary col-5" style="margin-right: auto; margin-left: auto;" role="alert">
+                There are currently @Model.PendingAdminsList.Count() admins pending! &nbsp;<a asp-action="PendingAdminsListView" asp-controller="PendingAdmins" class="alert-link">Click here</a> to view.
                 </span>
         }
     

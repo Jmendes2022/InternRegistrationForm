@@ -3,8 +3,12 @@
 	@LastName nvarchar(50),
 	@Department nvarchar(50),
 	@Username nvarchar(50),
-	@Password NVARCHAR(MAX),
-	@HasPermissions bit
+	@Password nvarchar(MAX),
+	@PermissionsLevel int,
+	@InternshipEmail nvarchar(50),
+	@SchoolEmail nvarchar(50),
+	@PersonalEmail nvarchar(50)
+
 AS
 BEGIN
 	INSERT INTO Admins
@@ -14,7 +18,10 @@ BEGIN
 		Department,
 		Username,
 		[Password],
-		HasPermissions
+		PermissionsLevel,
+		InternshipEmail,
+		SchoolEmail,
+		PersonalEmail
 	)
 
 	VALUES
@@ -24,7 +31,10 @@ BEGIN
 		@Department,
 		@Username,
 		@Password,
-		@HasPermissions
+		@PermissionsLevel,
+		@InternshipEmail,
+		@SchoolEmail,
+		@PersonalEmail
 	)
 
 	SELECT SCOPE_IDENTITY();

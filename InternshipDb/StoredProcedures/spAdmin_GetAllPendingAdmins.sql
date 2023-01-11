@@ -9,7 +9,10 @@ BEGIN
 		[Department], 
 		[Username], 
 		[Password], 
-		[HasPermissions]
+		[PermissionsLevel],
+		[InternshipEmail],
+		[SchoolEmail],
+		[PersonalEmail]
 	FROM
 		PendingAdmins;
 END

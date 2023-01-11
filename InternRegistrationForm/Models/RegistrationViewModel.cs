@@ -4,7 +4,7 @@
     {
         public InternsModel Intern { get; set; }
 
-        public TermDatesModel TermDates { get; set; }
+        public List<TermDatesModel> TermDates { get; set; }
 
     }
 }

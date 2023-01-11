@@ -45,12 +45,11 @@ namespace InternRegistrationForm.Controllers
                     return View(logInModel);
                 }
                 else
-                {
-                   
+                {                  
                         HttpContext.Session.SetString("AdminFirstName", admin.FirstName);
                         HttpContext.Session.SetString("AdminLastName", admin.LastName);
                         HttpContext.Session.SetInt32("AdminId", admin.Id);
-                        HttpContext.Session.SetString("HasPermissions", admin.HasPermissions.ToString());
+                        HttpContext.Session.SetInt32("PermissionsLevel", admin.PermissionsLevel);
 
                     logInModel.LoggedAttemptFailed = false;
                         
@@ -78,6 +77,16 @@ namespace InternRegistrationForm.Controllers
         {
             HttpContext.Session.Clear();
             return View();
+        }
+
+        public async Task<IActionResult> InvalidPermissions()
+        { 
+            InvalidPermissionsViewModel viewModel = new InvalidPermissionsViewModel();
+
+            viewModel.currentAdmin = HttpContext.Session.GetString("AdminFirstName");
+            viewModel.Admins = await _adminRepo.GetAllAdmins();
+
+            return View(viewModel);
         }
 
 

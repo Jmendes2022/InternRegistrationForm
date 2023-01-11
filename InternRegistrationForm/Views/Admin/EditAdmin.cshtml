@@ -4,6 +4,11 @@
 @{
 }
 @model AdminsModel
+@if (Context.Session.GetInt32("AdminId") != Model.Id || Context.Session.GetInt32("PermissionsLevel") != 2)
+{    <div>
+        <h1>You do not have permissions to view this page</h1>
+    </div>
+}
 
 <div>
     <div class="text-centered">
@@ -42,13 +47,24 @@
                 </select>
             </div>
         </div>
-        <div>
-                <input class="form-check-input" type="checkbox" value="true" asp-for="HasPermissions">
-                        <input class="form-check-input" type="hidden" value="false" asp-for="HasPermissions">
-                        <label class="form-check-label" asp-for="HasPermissions">
-                        Admin Permissions &nbsp;
-                        </label> 
-        </div>
+        <div class="mb-3">
+                    <label asp-for="InternshipEmail" class="form-label mb-2">Internship Email:</label>
+                    <input type="text" class="form-control mb-4" required asp-for="InternshipEmail" placeholder="Internship Email here..." aria-describedby="Last Name">
+                </div><div class="mb-3">
+                    <label asp-for="SchoolEmail" class="form-label mb-2">School Email:</label>
+                    <input type="text" class="form-control mb-4" required asp-for="SchoolEmail" placeholder="School Email here..." aria-describedby="Last Name">
+                </div><div class="mb-3">
+                    <label asp-for="PersonalEmail" class="form-label mb-2">Personal Email:</label>
+                    <input type="text" class="form-control mb-4" required asp-for="PersonalEmail" placeholder="Personal Email..." aria-describedby="Last Name">
+                </div>
+                <div class="my-3">
+                    <label asp-for="PermissionsLevel" class="form-label my-2">Permissions Level</label>
+                    <select class="form-select" asp-for="PermissionsLevel" required placeholder="Select an Option">
+                        <option value="0" selected >No Permissions</option>
+                        <option value="1">Editing Only</option>
+                        <option value="2">Full Permissions</option>
+                    </select>
+                </div>
         <div class="row">
             <div class="col mb-5 mt-5" style="text-align: center">
                 <button type="submit" class="btn btn-primary" asp-route-id="@Model.Id" style="width: 30%">Update Admin</button>

@@ -10,11 +10,12 @@
      dates.Add(DateTime.Today.Year.ToString().Remove(0, 2));
      dates.Add(nextYear.ToString().Remove(0, 2));
     
-     List<string> tracks = new List<string>() { "A", "B", "C", "D/E" };
-     List<string> Terms = new List<string>() { "01", "02", "03", "04", "05" };
+     List<string> tracks = new List<string>() { "A", "B", "C", "D", "E" };
+     List<string> Terms = new List<string>() { "01", "02", "03", "04", "05", "06", "07", "08" };
                             
 }
 @model RegistrationViewModel
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 
 <div>
@@ -34,13 +35,13 @@
                 </div>
                 <div class="mb-3 col-2">
                     <label asp-for="@Model.Intern.StartDate" class="mb-2">Internship Start Date: &nbsp;</label>
-                    <input type="date" required asp-for="@Model.Intern.StartDate"
+                    <input type="date" required id="startDate" asp-for="@Model.Intern.StartDate"
                            value="@DateTime.Today.ToString("MM-dd-yyyy")"
                            min="1900-01-01" max="@DateTime.Today.ToString("MM-dd-yyyy")">
                 </div>
                 <div class="mb-3 col-2">
                     <label asp-for="@Model.Intern.EndDate" class="mb-2">Internship End Date: &nbsp;</label>
-                    <input type="date" required asp-for="@Model.Intern.EndDate"
+                    <input type="date" required id="endDate" asp-for="@Model.Intern.EndDate"
                            value="@DateTime.Today.ToString("MM-dd-yyyy")"
                            min="1900-01-01" max="@DateTime.Today.ToString("MM-dd-yyyy")">
                 </div>
@@ -104,7 +105,7 @@
                 </div>
                     <div class="my-3 col-2">
                         <label asp-for="@Model.Intern.Track" class="form-label my-2">Track</label>
-                        <select class="form-select" type="date" required size="8" asp-for="@Model.Intern.Track" placeholder="Select an Option">
+                        <select class="form-select" type="date" required id="track" size="8" asp-for="@Model.Intern.Track" placeholder="Select an Option">
                             
                           @for (var i = 0; i < dates.Count(); i++)
                             {
@@ -286,5 +287,53 @@
 
 
 <script>
+
+    function SetDates()
+    {
+            for(var term in @Html.Raw(Model.TermDates))
+            {
+                if (term.Track === $("select[id$='track']").val()
+                {
+                    $("select[id$='startDate']").val("MM-dd-yyyy")
+                    $("select[id$='endDate']").val()
+                }
     
+            }
+    }
+
+    $(document).ready(function()
+    {
+        $("select[id$='track']").change(SetDates);
+    });
+    
+@*
+    function SetDates()
+        {
+           foreach (var x in @Model.TermDates)
+           {
+                if (x.Track === @Model.TermDates[x].Track)
+                {
+                    let startDate = x[StartDate];
+
+                    $("select[id$='startDate']").val(@Model.TermDates[x].StartDate);
+                    $("select[id$='endDate']").val(x["EndDate"]);
+                }
+                else
+                {
+                 $("select[id$='startDate']").val(1996-01-01);   
+                }
+           }
+        }
+    function TestFunction()
+    {
+        $("select[id$='startDate']").change(1996/01/01);
+    }
+
+
+    $(document).ready(function()
+    {
+        $("select[id$='track']").change($("select[id$=startDate]").val(@Model.TermDates));
+    });*@
+
+
 </script>

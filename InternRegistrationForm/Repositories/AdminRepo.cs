@@ -19,7 +19,8 @@ namespace InternRegistrationForm.Repositories
             string connString = _config.GetConnectionString("InternshipDb");
             using IDbConnection dbConnection = new SqlConnection(connString);
 
-            admin.Id = await dbConnection.QuerySingleOrDefaultAsync<int>("spAdmin_AddAdmin", new { Firstname = admin.FirstName, LastName = admin.LastName, Department = admin.Department, Username = admin.Username, Password = admin.Password, HasPermissions = admin.HasPermissions }, commandType: CommandType.StoredProcedure);
+            admin.Id = await dbConnection.QuerySingleOrDefaultAsync<int>("spAdmin_AddAdmin", new { Firstname = admin.FirstName, LastName = admin.LastName, Department = admin.Department, Username = admin.Username, Password = admin.Password, InternshipEmail = admin.InternshipEmail, SchoolEmail = admin.SchoolEmail, PersonalEmail = admin.PersonalEmail, PermissionsLevel = admin.PermissionsLevel}, commandType: CommandType.StoredProcedure);
+
             return admin;
         }
 
@@ -29,10 +30,7 @@ namespace InternRegistrationForm.Repositories
             using IDbConnection dbConnection = new SqlConnection(connString);
 
             AdminsModel admin = await dbConnection.QuerySingleOrDefaultAsync<AdminsModel>("spAdmin_GetAdminByUsername", new { username = username }, commandType: CommandType.StoredProcedure);
-            if (admin == null)
-            {
-                return null;
-            }
+
             return admin;
         }
 
@@ -59,7 +57,7 @@ namespace InternRegistrationForm.Repositories
             string connString = _config.GetConnectionString("InternshipDb");
             using IDbConnection dbConnection = new SqlConnection(connString);
 
-            admin.Id = await dbConnection.QuerySingleOrDefaultAsync<int>("spAdmin_AddPendingAdmin", new { FirstName = admin.FirstName, LastName = admin.LastName, Department = admin.Department, Username = admin.Username, Password = admin.Password, HasPermissions = admin.HasPermissions }, commandType: CommandType.StoredProcedure);
+            admin.Id = await dbConnection.QuerySingleOrDefaultAsync<int>("spAdmin_AddPendingAdmin", new { FirstName = admin.FirstName, LastName = admin.LastName, Department = admin.Department, Username = admin.Username, Password = admin.Password, InternshipEmail = admin.InternshipEmail, SchoolEmail = admin.SchoolEmail, PersonalEmail = admin.PersonalEmail, PermissionsLevel = admin.PermissionsLevel }, commandType: CommandType.StoredProcedure);
 
             return admin;
         }
@@ -107,7 +105,10 @@ namespace InternRegistrationForm.Repositories
                 Department = admin.Department,
                 Username = admin.Username,
                 Password = admin.Password,
-                HasPermissions = admin.HasPermissions
+                InternshipEmail = admin.InternshipEmail,
+                SchoolEmail = admin.SchoolEmail,
+                PersonalEmail = admin.PersonalEmail,
+                PermissionsLevel = admin.PermissionsLevel
             }, commandType: CommandType.StoredProcedure);
 
             return admin;

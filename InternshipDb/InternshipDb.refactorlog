@@ -7,4 +7,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="SchoolEmail" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="d9f58c04-0914-4c04-9072-44ee52820177" ChangeDateTime="01/10/2023 14:46:42">
+    <Property Name="ElementName" Value="[dbo].[Admins].[HasPermissions]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Admins]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PermissionsLevel" />
+  </Operation>
 </Operations>

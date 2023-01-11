@@ -1,0 +1,42 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[DroppedAdmins].[HasPermissions] is being dropped, data loss could occur.
+       The column [dbo].[PendingAdmins].[HasPermissions] is being dropped, data loss could occur.
+
+** User actions
+     Rename
+       [dbo].[Admins].[PermissionsLevel] (Column)
+     Drop
+       unnamed constraint on [dbo].[Admins] (Default Constraint)
+       unnamed constraint on [dbo].[DroppedAdmins] (Default Constraint)
+       unnamed constraint on [dbo].[PendingAdmins] (Default Constraint)
+     Alter
+       [dbo].[Admins] (Table)
+       [dbo].[DroppedAdmins] (Table)
+       [dbo].[PendingAdmins] (Table)
+       [dbo].[spAdmin_AcceptPendingAdminById] (Procedure)
+       [dbo].[spAdmin_AddAdmin] (Procedure)
+       [dbo].[spAdmin_DropAdmin] (Procedure)
+       [dbo].[spAdmin_EditAdmin] (Procedure)
+       [dbo].[spAdmin_GetAdmin] (Procedure)
+       [dbo].[spAdmin_GetAdminById] (Procedure)
+       [dbo].[spAdmin_GetAdminByUsername] (Procedure)
+       [dbo].[spAdmin_GetAllAdmins] (Procedure)
+       [dbo].[spAdmin_AddPendingAdmin] (Procedure)
+       [dbo].[spAdmin_GetAllPendingAdmins] (Procedure)
+
+** Supporting actions
+     Create
+       Default Constraint: unnamed constraint on [dbo].[Admins] (Default Constraint)
+     Refresh
+       [dbo].[spAdmin_DeletePendingAdmin] (Procedure)
+
+The column [dbo].[DroppedAdmins].[HasPermissions] is being dropped, data loss could occur.
+The column [dbo].[PendingAdmins].[HasPermissions] is being dropped, data loss could occur.
+

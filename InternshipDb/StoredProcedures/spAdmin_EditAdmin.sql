@@ -5,7 +5,11 @@
 	@Department nvarchar(50),
 	@Username nvarchar(50),
 	@Password nvarchar(50),
-	@HasPermissions bit
+	@PermissionsLevel int,
+	@InternshipEmail nvarchar(50),
+	@SchoolEmail nvarchar(50),
+	@PersonalEmail nvarchar(50)
+
 AS
 BEGIN
 	UPDATE Admins
@@ -16,7 +20,10 @@ BEGIN
 		Department = @Department,
 		Username = @Username,
 		[Password] = @Password,
-		HasPermissions = @HasPermissions
+		PermissionsLevel = @PermissionsLevel,
+		InternshipEmail = @InternshipEmail,
+		SchoolEmail = @SchoolEmail,
+		PersonalEmail = @PersonalEmail
 
 	WHERE
 		Id = @Id;
@@ -28,7 +35,10 @@ BEGIN
 		[Department], 
 		[Username], 
 		[Password],
-		HasPermissions
+		[PermissionsLevel],
+		[InternshipEmail],
+		[SchoolEmail],
+		[PersonalEmail]
 	FROM
 		Admins
 	WHERE

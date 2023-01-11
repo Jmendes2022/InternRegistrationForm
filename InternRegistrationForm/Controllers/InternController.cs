@@ -10,17 +10,28 @@ namespace InternRegistrationForm.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IInternRepo _internRepo;
         private readonly IAdminRepo _adminRepo;
+        private readonly ITermDatesRepo _termDates;
 
-        public InternController(ILogger<HomeController> logger, IInternRepo internRepo, IAdminRepo adminRepo)
+        public InternController(ILogger<HomeController> logger, IInternRepo internRepo, IAdminRepo adminRepo, ITermDatesRepo termDates)
         {
             _logger = logger;
             _internRepo = internRepo;
             _adminRepo = adminRepo;
+            _termDates = termDates;
         }
 
+
+        //This action registers interns to the database
         [HttpPost]
         public async Task<IActionResult> Registration(InternsModel intern)
         {
+            //if the current user has 0 permissions, they dont have ability to edit anything.
+
+            if (HttpContext.Session.GetInt32("PermissionsLevel") == 0)
+            {
+                return RedirectToAction(nameof(HomeController.InvalidPermissions), NameOfController.ControllerName(nameof(HomeController)));
+            }
+
             if (HttpContext.Session.GetInt32("AdminId") == null)
             {
                 return RedirectToAction(nameof(HomeController.LogIn), NameOfController.ControllerName(nameof(HomeController)));
@@ -32,33 +43,44 @@ namespace InternRegistrationForm.Controllers
 
             await _internRepo.AddIntern(intern);
 
-            if (HttpContext.Session.GetInt32("AdminId") != null)
-            {
-                return RedirectToAction(nameof(AdminController.AdminIndex), NameOfController.ControllerName(nameof(AdminController)));
-            }
-
-            return RedirectToAction(nameof(HomeController.LogIn), NameOfController.ControllerName(nameof(HomeController)));
+            return RedirectToAction(nameof(AdminController.AdminIndex), NameOfController.ControllerName(nameof(AdminController)));
         }
 
-       
+
+        //This action gets the form page to register interns
         [HttpGet]
-        public IActionResult Registration()
+        public async Task<IActionResult> Registration()
         {
+            if (HttpContext.Session.GetInt32("PermissionsLevel") == 0)
+            {
+                return RedirectToAction(nameof(HomeController.InvalidPermissions), NameOfController.ControllerName(nameof(HomeController)));
+            }
+
             if (HttpContext.Session.GetInt32("AdminId") == null)
             {
                 return RedirectToAction(nameof(HomeController.LogIn), NameOfController.ControllerName(nameof(HomeController)));
             }
-            return View(nameof(Registration));
+
+            RegistrationViewModel registrationViewModel = new RegistrationViewModel();
+            registrationViewModel.TermDates = await _termDates.GetAll();
+
+            return View(nameof(Registration), registrationViewModel);
         }
 
-
+        //Returns an intern from the dropped data tables
         public IActionResult ResurrectIntern(int id)
         {
+            if (HttpContext.Session.GetInt32("PermissionsLevel") == 0)
+            {
+                return RedirectToAction(nameof(HomeController.InvalidPermissions), NameOfController.ControllerName(nameof(HomeController)));
+            }
+
             _internRepo.ResurrectIntern(id);
 
             return RedirectToAction(nameof(AdminController.AdminIndex), NameOfController.ControllerName(nameof(AdminController)));
         }
 
+        //This action displays an individual dropped intern
         public async Task<IActionResult> DisplayDroppedIntern(int id)
         {
             InternsModel droppedIntern = await _internRepo.GetDroppedInternById(id);
@@ -66,8 +88,10 @@ namespace InternRegistrationForm.Controllers
             return View(droppedIntern);
         }
 
+        //This action displays the list of all the dropped interns
         public async Task<IActionResult> DroppedInterns()
         {
+
             if (HttpContext.Session.GetInt32("AdminId") == null)
             {
                 return RedirectToAction(nameof(HomeController.LogIn), NameOfController.ControllerName(nameof(HomeController)));
@@ -78,6 +102,7 @@ namespace InternRegistrationForm.Controllers
             return View(droppedInterns);
         }
 
+        //This action drops an intern from the intern data table and stores them into a droppedInterns table
         public IActionResult DropIntern(int internId)
         {
             if (HttpContext.Session.GetInt32("AdminId") == null)
@@ -85,11 +110,17 @@ namespace InternRegistrationForm.Controllers
                 return RedirectToAction(nameof(HomeController.LogIn), NameOfController.ControllerName(nameof(HomeController)));
             }
 
+            if (HttpContext.Session.GetInt32("PermissionsLevel") == 0)
+            {
+                return RedirectToAction(nameof(HomeController.InvalidPermissions), NameOfController.ControllerName(nameof(HomeController)));
+            }
+
             _internRepo.DropIntern(internId);
 
             return RedirectToAction(nameof(AdminController.AdminIndex), NameOfController.ControllerName(nameof(AdminController)));
         }
 
+        //This action allows for an itern to be edited
         [HttpPost]
         public IActionResult EditIntern(InternsModel intern)
         {
@@ -97,6 +128,12 @@ namespace InternRegistrationForm.Controllers
             {
                 return RedirectToAction(nameof(HomeController.LogIn), NameOfController.ControllerName(nameof(HomeController)));
             }
+
+            if (HttpContext.Session.GetInt32("PermissionsLevel") == 0)
+            {
+                return RedirectToAction(nameof(HomeController.InvalidPermissions), NameOfController.ControllerName(nameof(HomeController)));
+            }
+
             intern.LastUpdatedBy = HttpContext.Session.GetString("AdminFirstName") + " " + HttpContext.Session.GetString("AdminLastName");
             intern.LastUpdate = DateTime.Now;
 
@@ -105,6 +142,8 @@ namespace InternRegistrationForm.Controllers
 
             return RedirectToAction(nameof(AdminController.AdminIndex), NameOfController.ControllerName(nameof(AdminController)));
         }
+
+        //This gets the intern intial information ready to be edited in the view
         [HttpGet]
         public async Task<IActionResult> EditIntern(int internId)
         {
@@ -112,12 +151,17 @@ namespace InternRegistrationForm.Controllers
             {
                 return RedirectToAction(nameof(HomeController.LogIn), NameOfController.ControllerName(nameof(HomeController)));
             }
+            if (HttpContext.Session.GetInt32("PermissionsLevel") == 0)
+            {
+                return RedirectToAction(nameof(HomeController.InvalidPermissions), NameOfController.ControllerName(nameof(HomeController)));
+            }
 
             InternsModel intern = await _internRepo.GetInternById(internId);
 
             return View(intern);
         }
 
+        //This action displays an individual intern 
         public async Task<IActionResult> DisplayIntern(int internId)
         {
             if (HttpContext.Session.GetInt32("AdminId") == null)
@@ -134,11 +178,17 @@ namespace InternRegistrationForm.Controllers
             return View(intern);
         }
 
+        //This action archives an intern after they have graduated.
         public IActionResult ArchiveIntern(int internId)
         {
             if (HttpContext.Session.GetInt32("AdminId") == null)
             {
                 return RedirectToAction(nameof(HomeController.LogIn), NameOfController.ControllerName(nameof(HomeController)));
+            }
+
+            if (HttpContext.Session.GetInt32("PermissionsLevel") == 0)
+            {
+                return RedirectToAction(nameof(HomeController.InvalidPermissions), NameOfController.ControllerName(nameof(HomeController)));
             }
 
             _internRepo.ArchiveIntern(internId);
@@ -155,6 +205,11 @@ namespace InternRegistrationForm.Controllers
 
         public IActionResult ResurrectArchivedIntern(int id)
         {
+            if (HttpContext.Session.GetInt32("PermissionsLevel") == 0)
+            {
+                return RedirectToAction(nameof(HomeController.InvalidPermissions), NameOfController.ControllerName(nameof(HomeController)));
+            }
+
             _adminRepo.ResurrectArchivedIntern(id);
 
             return RedirectToAction(nameof(AdminController.AdminIndex), NameOfController.ControllerName(nameof(AdminController)));
